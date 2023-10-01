@@ -1,0 +1,119 @@
+/* ESTILIZAÇÃO GLOBAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ESTILIZANDO O BODY */
+
+body{
+    width: 100VW;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(0, 0, 0, 0.541);
+}
+
+/* ESTILIZANDO O BOTÃO PARA ABRIR O MODAL */
+.btnOpenModal{
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    background-color: aqua;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 400px;
+    color: white;
+}
+
+
+hr{
+    border: 8px;
+    border-top: 1px solid aliceblue;
+    margin-top: 20px;
+}
+
+.modal-container{
+    width: 100vw;
+    position: fixed;
+    top: 30px;
+    display: none;
+    z-index: 999;
+    justify-content: center;
+}
+
+.modal{
+    display:flex;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    flex-direction: column;
+}
+
+/* QUANDO FOR CLICADO NO BOTÃO, SERÁ ACTIVADO A CLASSE ACTIVE */
+.active{
+    display: flex;
+}
+
+/* QUANDO FOR ACTIVADO A NOSSA MODAL, VAI APARECER UMA ANIMAÇÃO */
+.active .modal{
+    animation: modal .4s;
+}
+
+/* ANIMAÇÃO QUANDO ABRIMOS O NOSSO MODAL */
+@keyframes modal{
+    form{
+        opacity: 0;
+        transform: matrix(0, -60px, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btnOK{
+    background-color: rgb(18, 18, 167);
+    cursor: pointer;
+    padding:10px ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.btnOK.btnOK:hover{
+    background-color: rgba(108, 193, 23, 0.525);
+}
+
+.btnClose{
+    background-color: rgb(207, 17, 17);
+    cursor: pointer;
+    padding:10px ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 500px){
+    .modal {
+        padding: 10px;
+        width: 80%;
+    }
+
+    span, .btns bottom {
+        font-size: smaller;
+    }
+}
