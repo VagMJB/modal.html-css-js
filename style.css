@@ -34,7 +34,7 @@ body{
 hr{
     border: 8px;
     border-top: 1px solid aliceblue;
-    margin-top: 20px;
+    padding: 5px;
 }
 
 .modal-container{
